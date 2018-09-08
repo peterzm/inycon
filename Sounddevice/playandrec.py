@@ -24,6 +24,12 @@ def playrec_tone(frecuencia, duracion, amplitud=0.5, fs=200000):
     data = amplitud*np.sin(2*np.pi*frecuencia*tiempo)
     
     grabacion = sd.playrec(data, blocking=True)
+
+    plt.subplot(2,1,1)
+    plt.plot(tiempo, data,'b.--')
+    plt.subplot(2,1,2)
+    plt.plot(tiempo, grabacion,'r.--')
+
     
     return tiempo, data, grabacion
 
