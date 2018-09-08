@@ -14,6 +14,8 @@ def playrec_tone(frecuencia, duracion, amplitud=0.1, fs=192000):
     sd.default.samplerate = fs #frecuencia de muestreo
     sd.default.channels = 2,2 #por las dos salidas de audio
     
+    cantidad_de_periodos = duracion*frecuencia
+    
     tiempo, data = generador_de_senhal(frecuencia, duracion, amplitud, 'sin')      
     grabacion = sd.playrec(data, blocking=True)
     
