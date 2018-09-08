@@ -17,8 +17,11 @@ def playrec_tone(frecuencia, duracion, amplitud=0.1, fs=192000):
     cantidad_de_periodos = duracion*frecuencia
     puntos_por_periodo = int(fs/frecuencia)
     puntos_totales = puntos_por_periodo*cantidad_de_periodos
+
+    tiempo = np.linspace(0, duracion, puntos_totales)
+
+    data = amplitud*np.sin(2*np.pi*frecuencia*tiempo)
     
-    tiempo, data = generador_de_senhal(frecuencia, duracion, amplitud, 'sin')      
     grabacion = sd.playrec(data, blocking=True)
     
     return tiempo, data, grabacion
