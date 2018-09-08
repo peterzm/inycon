@@ -7,7 +7,7 @@ from scipy import signal
 
 
 
-def playrec_tone(frecuencia, duracion, amplitud=0.1, fs=192000):
+def playrec_tone(frecuencia, duracion, amplitud=0.5, fs=200000):
     """
     Emite un tono y lo graba.
     """
