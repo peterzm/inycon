@@ -27,8 +27,10 @@ def playrec_tone(frecuencia, duracion, amplitud=0.5, fs=200000):
 
     plt.subplot(2,1,1)
     plt.plot(tiempo, data,'b.--')
+    plt.xlim([0.524, 0.525])
     plt.subplot(2,1,2)
     plt.plot(tiempo, grabacion,'r.--')
+    plt.xlim([0.524, 0.525])
 
     
     return tiempo, data, grabacion
