@@ -5,7 +5,8 @@ import time
 from scipy.signal import find_peaks
 from scipy import signal
 
-
+frecuencia=5000
+duracion=1
 
 def playrec_tone(frecuencia, duracion, amplitud=0.5, fs=200000):
     """
