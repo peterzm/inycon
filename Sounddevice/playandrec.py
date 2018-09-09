@@ -40,4 +40,13 @@ tiempo=datos[0]
 data=datos[1]
 grabacion=datos[2]
 
+with open("resultados_frecuencia=" + str(frecuencia) + ".txt", "w") as out_file:
+    for i in range(len(tiempo)):
+        out_string = ""
+        out_string += str(tiempo[i])
+        out_string += "," + str(data[i])
+        out_string += "," + str(grabacion[i])
+        out_string += "\n"
+        out_file.write(out_string)
+
 
