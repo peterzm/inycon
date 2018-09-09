@@ -1,5 +1,6 @@
 import sounddevice as sd
 import numpy as np
+from numpy import arange
 import pylab as plt
 import time
 from scipy.signal import find_peaks
