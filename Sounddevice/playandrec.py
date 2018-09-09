@@ -36,5 +36,8 @@ def playrec_tone(frecuencia, duracion, amplitud=0.5, fs=200000):
     return tiempo, data, grabacion
 
 datos=playrec_tone(frecuencia,duracion)
+tiempo=datos[0]
+data=datos[1]
+grabacion=datos[2]
 
 
